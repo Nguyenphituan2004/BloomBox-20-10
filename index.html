@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff1f7">
+  <meta name="description" content="BloomBox - món quà nhỏ dành tặng đồng nghiệp ngày 20/10">
+  <title>BloomBox 20/10 💗</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <div class="floating flower flower-one" aria-hidden="true">🌸</div>
+  <div class="floating flower flower-two" aria-hidden="true">🌷</div>
+  <div class="floating heart heart-one" aria-hidden="true">💕</div>
+  <div class="floating flower flower-three" aria-hidden="true">🌼</div>
+  <div class="floating heart heart-two" aria-hidden="true">💗</div>
+
+  <button id="soundToggle" class="sound-toggle" type="button"
+          aria-pressed="false" aria-label="Bật âm thanh">
+    <span id="soundIcon" aria-hidden="true">🔇</span>
+    <span id="soundLabel">Bật âm thanh</span>
+  </button>
+
+  <main class="card">
+    <div class="top-label">
+      <span>✿</span> A LITTLE GIFT FOR YOU <span>✿</span>
+    </div>
+
+    <p class="date">20 · 10 · 2026</p>
+
+    <div class="flowers" aria-hidden="true">🌷 🌸 🌷</div>
+
+    <h1>Một chút<br><span>yêu thương</span> 💗</h1>
+
+    <p class="intro">
+      Nhân ngày Phụ nữ Việt Nam 20/10,
+      có một món quà nhỏ đang chờ bạn khám phá.
+    </p>
+
+    <p class="step-label">BƯỚC 1 · NHẬP TÊN CỦA BẠN</p>
+
+    <label class="name-label" for="recipientName">
+      Món quà này dành cho ai nhỉ? 💌
+    </label>
+
+    <input
+      id="recipientName"
+      type="text"
+      placeholder="Ví dụ: Lê, Vân, Phượng..."
+      maxlength="40"
+      autocomplete="off"
+      aria-describedby="nameError"
+    >
+
+    <p id="nameError" class="error" role="status" hidden>
+      Bạn nhập tên trước nhé! 💗
+    </p>
+
+    <p id="greeting" class="greeting">
+      Một món quà bí mật dành riêng cho bạn
+    </p>
+
+    <p id="message" class="message" aria-live="polite">
+      Sẵn sàng khám phá một bất ngờ nho nhỏ chưa? ✨
+    </p>
+
+    <!-- HỘP QUÀ 3D -->
+    <section class="gift-stage" aria-label="Hộp quà bí mật">
+      <div id="gift" class="gift-scene">
+        <div class="gift-shadow"></div>
+
+        <div class="gift-box">
+          <div class="gift-front"></div>
+          <div class="gift-side"></div>
+          <div class="gift-top"></div>
+          <div class="gift-ribbon-front"></div>
+          <div class="gift-ribbon-side"></div>
+        </div>
+
+        <div class="gift-lid">
+          <div class="lid-top"></div>
+          <div class="lid-front"></div>
+          <div class="lid-side"></div>
+          <div class="lid-ribbon"></div>
+          <div class="bow bow-left"></div>
+          <div class="bow bow-right"></div>
+          <div class="bow-center"></div>
+        </div>
+
+        <span class="gift-sparkle sparkle-one">✦</span>
+        <span class="gift-sparkle sparkle-two">✧</span>
+        <span class="gift-sparkle sparkle-three">✦</span>
+      </div>
+    </section>
+
+    <button id="openButton" class="primary-button" type="button">
+      Mở hộp quà bí mật ✨
+    </button>
+
+    <p class="tiny-hint">Một bất ngờ dễ thương đang chờ bạn 💕</p>
+
+    <!-- THIỆP CÁ NHÂN HÓA -->
+    <section id="result" class="result" hidden aria-live="polite">
+      <div class="result-divider">♡ ───── ✿ ───── ♡</div>
+
+      <p class="result-label">MỘT TẤM THIỆP DÀNH RIÊNG CHO</p>
+
+      <article class="greeting-card">
+        <div class="card-decoration card-decoration-top">🌷 ✨ 🌸</div>
+        <p class="card-small-title">A LITTLE NOTE FOR YOU</p>
+        <h2 id="cardRecipient">Bạn thân mến 💗</h2>
+        <div class="card-heart" aria-hidden="true">💌</div>
+        <p id="wish" class="wish"></p>
+        <div class="card-decoration card-decoration-bottom">♡ ✿ ♡</div>
+        <p class="card-date">20 · 10 · 2026</p>
+      </article>
+
+      <!-- THẺ QUÀ BÍ MẬT -->
+      <p class="step-label prize-step">BƯỚC 2 · KHÁM PHÁ MÓN QUÀ</p>
+
+      <p class="prize-intro">
+        Có một món quà nhỏ đang được giấu ở đây...
+      </p>
+
+      <button
+        id="revealButton"
+        class="mystery-card"
+        type="button"
+        aria-expanded="false"
+        aria-controls="prizeReveal"
+      >
+        <span id="mysteryFace" class="mystery-face">
+          <span class="mystery-sparkles" aria-hidden="true">✦ ✧ ✦</span>
+          <span class="mystery-question">?</span>
+          <span class="mystery-title">YOUR SECRET GIFT</span>
+          <span class="mystery-hint">Nhấn để khám phá 💗</span>
+        </span>
+      </button>
+
+      <section id="prizeReveal" class="prize-reveal" hidden>
+        <div id="prizeIcon" class="prize-icon" aria-hidden="true">🧋</div>
+        <p class="prize-reveal-label">BẠN NHẬN ĐƯỢC</p>
+        <h2 id="giftName"></h2>
+
+        <div class="voucher">
+          <span class="voucher-title">YOUR LITTLE TREAT</span>
+          <p id="voucherDesc" class="voucher-desc">
+            Một món ngon dành riêng cho bạn! 💗
+          </p>
+          <p id="prizeLimit" class="voucher-limit"></p>
+          <div class="voucher-line"></div>
+          <p id="voucherNote" class="voucher-note">
+            Chọn món bạn thích rồi báo mình nhé 💕
+          </p>
+          <span class="voucher-stamp">FOR YOU ♡</span>
+        </div>
+
+        <p id="signature" class="signature"></p>
+        <p id="closing" class="closing"></p>
+
+        <button id="replayButton" class="secondary-button" type="button">
+          Xem lại lời chúc 💌
+        </button>
+      </section>
+    </section>
+
+    <p class="footer">Made with love · BloomBox 2026 🌷</p>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
